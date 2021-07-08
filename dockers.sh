@@ -4,7 +4,7 @@ mkdir /root/biz
 cd /root/biz
 apt-get install curl
 
-curl https://github.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts/blob/master/installation/multiconnect-compose.yml > multiconnect-compose.yml
+curl https://github.com/hrushigavhane/Muticonnectdocker/blob/main/multiconnect-compose.yml > multiconnect-compose.yml
 curl https://github.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts/blob/master/installation/db.env > db.env
 export WA_API_VERSION=2.35.4
 
