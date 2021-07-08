@@ -3,9 +3,8 @@
 mkdir /root/biz
 cd /root/biz
 apt-get install curl
-#curl https://raw.githubusercontent.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts/master/installation/docker-compose.yml > docker-compose.yml
+
 curl https://github.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts/blob/master/installation/multiconnect-compose.yml > multiconnect-compose.yml
-#curl https://raw.githubusercontent.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts/master/installation/db.env > db.env
 curl https://github.com/WhatsApp/WhatsApp-Business-API-Setup-Scripts/blob/master/installation/db.env > db.env
 export WA_API_VERSION=2.35.4
 
@@ -27,10 +26,9 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 
-#docker-compose -f multiconnect-compose.yml up -d db waweb master1 master2 wacore1 wacore2
-#docker-compose -f multiconnect-compose.yml ps
-docker-compose up -d
-docker-compose ps
+docker-compose -f multiconnect-compose.yml up -d db waweb master1 master2 wacore1 wacore2
+docker-compose -f multiconnect-compose.yml ps
+
 export WA_API_VERSION=2.35.4
 
 
